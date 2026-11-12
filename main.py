@@ -5,8 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 TOKEN = os.getenv('BOT_TOKEN')
-
-bot = telebot.TeleBot(token='8407611486:AAH5LQNf7HCQRspUBN85uaPT9OBWGXj9cs8')
+bot = telebot.TeleBot(TOKEN)
 @bot.message_handler(commands=['start'])
 def start(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
